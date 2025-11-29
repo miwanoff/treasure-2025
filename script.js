@@ -17,6 +17,9 @@ console.log(map.height);
 wrap.style.width = `${map.width}px`;
 wrap.style.height = `${map.height}px`;
 
+info.style = "width: 240px; border: solid lime; background: #fff5c0";
+info.style.height = "48px";
+
 map.onmousemove = function (event) {
-//   console.log(event);
+  //   console.log(event);
 };
