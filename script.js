@@ -19,7 +19,17 @@ wrap.style.height = `${map.height}px`;
 
 info.style = "width: 240px; border: solid lime; background: #fff5c0";
 info.style.height = "48px";
+info.style.fontSize = "24px";
 
 map.onmousemove = function (event) {
-  //   console.log(event);
+  let x = event.offsetX;
+  const distanceX = Math.abs(treasure.x - x);
+//   console.log(x, distanceX);
+  coords.value = `Coords ${x}`
+  if (distanceX <= 50) {
+    info.innerHTML="Treasure is here!"
+  }
+  else {
+    info.innerHTML="Info"
+  }
 };
